@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* 1. Custom Theme & Typography Variable Declarations */
+@layer base {
+  :root {
+    --font-telugu: "Noto Sans Telugu", "sans-serif";
+    --font-sans: "DM Sans", "sans-serif";
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom styled scrollbars for newsroom dashboards */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+  }
+}
+
+/* 2. Custom Keyframe Animations for Professional Feedbacks */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Animated custom CSS utilities */
+.animate-shimmer {
+  animation: shimmer 1.8s infinite;
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-pulse-custom {
+  animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Specific Telugu typography styling helper */
+.font-telugu {
+  font-family: var(--font-telugu);
+}

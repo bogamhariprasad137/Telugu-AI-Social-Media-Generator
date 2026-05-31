@@ -1,0 +1,6 @@
+{
+  "name": "Telugu AI Social Media Post Generator",
+  "description": "An advanced, professional newsroom assistant that generates Telugu brand social media packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
